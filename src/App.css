@@ -1,0 +1,87 @@
+.landing__hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  overflow: hidden;
+
+  /* Layered background image: a dusk greenhouse gradient behind a
+     hand-drawn foliage silhouette, so the hero reads as a nursery
+     scene without depending on an external photo asset. */
+  background-image:
+    linear-gradient(180deg, rgba(16, 41, 29, 0.82) 0%, rgba(27, 67, 50, 0.72) 55%, rgba(16, 41, 29, 0.9) 100%),
+    radial-gradient(ellipse at 20% 15%, rgba(227, 168, 87, 0.35) 0%, transparent 45%),
+    radial-gradient(ellipse at 82% 78%, rgba(156, 184, 168, 0.3) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cg fill='%2310291D' opacity='0.55'%3E%3Cpath d='M0 500 L0 360 Q60 300 120 380 Q160 300 220 360 Q260 260 320 340 Q360 260 420 330 Q470 240 520 320 Q560 250 620 330 Q670 260 720 340 Q760 300 800 360 L800 500 Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover, cover, cover, cover;
+  background-position: center, center, center, bottom;
+  background-color: var(--forest-dark);
+}
+
+.landing__hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 40%, rgba(16, 41, 29, 0.35) 100%);
+  pointer-events: none;
+}
+
+.landing__hero-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 640px;
+}
+
+.landing__eyebrow {
+  font-family: var(--font-mono);
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  margin: 0 0 18px;
+}
+
+.landing__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.6rem, 7vw, 4.6rem);
+  color: var(--cream);
+  line-height: 1.05;
+  margin: 0 0 20px;
+}
+
+.landing__tagline {
+  color: var(--cream-soft);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 0 0 36px;
+}
+
+.landing__cta {
+  background: var(--gold);
+  color: var(--forest-dark);
+  border: none;
+  padding: 15px 38px;
+  border-radius: 999px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.landing__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 560px) {
+  .landing__hero {
+    min-height: 80vh;
+    padding: 24px;
+  }
+}

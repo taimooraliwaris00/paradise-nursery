@@ -1,0 +1,57 @@
+.about-us {
+  position: relative;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 72px 32px 96px;
+}
+
+.about-us__rings {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.about-us__eyebrow {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  color: var(--clay-dark);
+  margin: 0 0 8px;
+}
+
+.about-us h2 {
+  font-size: 2rem;
+  color: var(--forest-dark);
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 0 0 16px;
+  font-size: 1.02rem;
+}
+
+.about-us p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 680px) {
+  .about-us {
+    grid-template-columns: 1fr;
+    padding: 56px 22px 72px;
+    text-align: left;
+  }
+  .about-us__rings {
+    justify-content: flex-start;
+  }
+  .about-us__rings svg {
+    width: 90px;
+    height: 90px;
+  }
+}
