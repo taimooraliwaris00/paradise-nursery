@@ -1,0 +1,13 @@
+.plant-thumb {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.plant-thumb__shadow {
+  fill: rgba(27, 67, 50, 0.14);
+}
+
+.plant-thumb__pot {
+  filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.08));
+}
